@@ -8,8 +8,8 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types",
     "prepare": "husky",
-    "write":"pnpm exec prettier . --write",
-    "check":"pnpm exec prettier . --check"
+    "write": "pnpm exec prettier . --write",
+    "check": "pnpm exec prettier . --check"
   },
   "devDependencies": {
     "prettier": "^3.7.4",

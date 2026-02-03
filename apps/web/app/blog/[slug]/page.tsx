@@ -1,9 +1,16 @@
-'use client'
+"use client";
 // import { useParams, Link } from "react-";
 import { motion } from "motion/react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, Calendar, Clock, User, Share2, BookOpen } from "lucide-react";
+import {
+  ArrowLeft,
+  Calendar,
+  Clock,
+  User,
+  Share2,
+  BookOpen,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ReadingProgressBar from "@/components/_components/readingProgress";
 import { getBlogPostBySlug, blogPosts } from "@/data/blogPosts";
@@ -44,7 +51,7 @@ const BlogPost = () => {
   // Convert markdown-like content to HTML-safe paragraphs
   const renderContent = (content: string) => {
     const lines = content.trim().split("\n");
-    const elements:any = [];
+    const elements: any = [];
     let currentList: string[] = [];
     let listType: "ul" | "ol" | null = null;
 
@@ -52,11 +59,14 @@ const BlogPost = () => {
       if (currentList.length > 0 && listType) {
         const ListTag = listType;
         elements.push(
-          <ListTag key={elements.length} className={`${listType === "ol" ? "list-decimal" : "list-disc"} list-inside space-y-2 my-4 text-muted-foreground`}>
+          <ListTag
+            key={elements.length}
+            className={`${listType === "ol" ? "list-decimal" : "list-disc"} list-inside space-y-2 my-4 text-muted-foreground`}
+          >
             {currentList.map((item, i) => (
               <li key={i}>{item}</li>
             ))}
-          </ListTag>
+          </ListTag>,
         );
         currentList = [];
         listType = null;
@@ -65,7 +75,7 @@ const BlogPost = () => {
 
     lines.forEach((line, index) => {
       const trimmedLine = line.trim();
-      
+
       if (!trimmedLine) {
         flushList();
         return;
@@ -75,9 +85,12 @@ const BlogPost = () => {
       if (trimmedLine.startsWith("## ")) {
         flushList();
         elements.push(
-          <h2 key={index} className="font-display text-2xl font-bold text-foreground mt-10 mb-4">
+          <h2
+            key={index}
+            className="font-display text-2xl font-bold text-foreground mt-10 mb-4"
+          >
             {trimmedLine.replace("## ", "")}
-          </h2>
+          </h2>,
         );
         return;
       }
@@ -86,9 +99,12 @@ const BlogPost = () => {
       if (trimmedLine.startsWith("### ")) {
         flushList();
         elements.push(
-          <h3 key={index} className="font-display text-xl font-semibold text-foreground mt-8 mb-3">
+          <h3
+            key={index}
+            className="font-display text-xl font-semibold text-foreground mt-8 mb-3"
+          >
             {trimmedLine.replace("### ", "")}
-          </h3>
+          </h3>,
         );
         return;
       }
@@ -102,7 +118,7 @@ const BlogPost = () => {
           <p key={index} className="text-muted-foreground leading-relaxed my-4">
             <strong className="text-foreground">{boldText}:</strong>
             {rest.join("**:")}
-          </p>
+          </p>,
         );
         return;
       }
@@ -123,7 +139,9 @@ const BlogPost = () => {
           flushList();
           listType = "ol";
         }
-        currentList.push(trimmedLine.replace(/^\d+\.\s/, "").replace(/\*\*/g, ""));
+        currentList.push(
+          trimmedLine.replace(/^\d+\.\s/, "").replace(/\*\*/g, ""),
+        );
         return;
       }
 
@@ -132,7 +150,7 @@ const BlogPost = () => {
       elements.push(
         <p key={index} className="text-muted-foreground leading-relaxed my-4">
           {trimmedLine.replace(/\*\*/g, "")}
-        </p>
+        </p>,
       );
     });
 
@@ -143,7 +161,7 @@ const BlogPost = () => {
   return (
     <div className="min-h-screen bg-background">
       <ReadingProgressBar />
-      
+
       <main className="pt-20 lg:pt-24">
         {/* Hero Image */}
         <div className="relative h-[40vh] md:h-[50vh] overflow-hidden">
@@ -203,7 +221,9 @@ const BlogPost = () => {
               </div>
               <div>
                 <p className="font-semibold text-foreground">{post.author}</p>
-                <p className="text-sm text-muted-foreground">{post.authorBio}</p>
+                <p className="text-sm text-muted-foreground">
+                  {post.authorBio}
+                </p>
               </div>
             </div>
 
@@ -251,7 +271,10 @@ const BlogPost = () => {
                     <article className="bg-card rounded-xl overflow-hidden card-shadow hover:card-shadow-hover transition-all">
                       <div className="relative overflow-hidden">
                         <img
-                          src={relatedPost.image.replace("w=1200&h=600", "w=400&h=250")}
+                          src={relatedPost.image.replace(
+                            "w=1200&h=600",
+                            "w=400&h=250",
+                          )}
                           alt={relatedPost.title}
                           className="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-500"
                         />

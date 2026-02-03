@@ -18,7 +18,8 @@ export const blogPosts: BlogPost[] = [
     id: 1,
     slug: "pomodoro-technique-master-time-management",
     title: "The Pomodoro Technique: Master Time Management",
-    excerpt: "Learn how breaking your study sessions into focused intervals can dramatically improve your productivity and retention.",
+    excerpt:
+      "Learn how breaking your study sessions into focused intervals can dramatically improve your productivity and retention.",
     content: `
 The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s. Named after the tomato-shaped kitchen timer Cirillo used as a university student, this technique has become one of the most popular productivity methods worldwide.
 
@@ -76,17 +77,20 @@ The beauty of the Pomodoro Technique lies in its simplicity. There's no complex 
     `,
     category: "Study Tips",
     author: "Dr. Sarah Chen",
-    authorBio: "Educational psychologist specializing in learning optimization and student productivity.",
+    authorBio:
+      "Educational psychologist specializing in learning optimization and student productivity.",
     date: "Jan 28, 2024",
     readTime: "5 min read",
-    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200&h=600&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200&h=600&fit=crop",
     featured: true,
   },
   {
     id: 2,
     slug: "understanding-quantum-mechanics-beginners-guide",
     title: "Understanding Quantum Mechanics: A Beginner's Guide",
-    excerpt: "Demystifying the complex world of quantum physics with simple explanations and real-world examples.",
+    excerpt:
+      "Demystifying the complex world of quantum physics with simple explanations and real-world examples.",
     content: `
 Quantum mechanics is often portrayed as mysterious and incomprehensible, but at its core, it's simply the physics of the very small. Let's demystify this fascinating field together.
 
@@ -139,17 +143,20 @@ The quantum world is strange, but it's not beyond comprehension. With patience a
     `,
     category: "Science",
     author: "Prof. James Miller",
-    authorBio: "Physics professor with 20 years of experience making complex concepts accessible to students.",
+    authorBio:
+      "Physics professor with 20 years of experience making complex concepts accessible to students.",
     date: "Jan 25, 2024",
     readTime: "8 min read",
-    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=1200&h=600&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=1200&h=600&fit=crop",
     featured: false,
   },
   {
     id: 3,
     slug: "calculus-made-simple-derivatives-explained",
     title: "Calculus Made Simple: Derivatives Explained",
-    excerpt: "A step-by-step approach to understanding derivatives without the confusion.",
+    excerpt:
+      "A step-by-step approach to understanding derivatives without the confusion.",
     content: `
 Derivatives are one of the fundamental concepts in calculus, yet many students find them intimidating. Let's break them down into simple, understandable pieces.
 
@@ -208,17 +215,20 @@ Calculus doesn't have to be scary. With a solid understanding of derivatives, yo
     `,
     category: "Mathematics",
     author: "Emily Rodriguez",
-    authorBio: "Mathematics educator passionate about making calculus accessible to all students.",
+    authorBio:
+      "Mathematics educator passionate about making calculus accessible to all students.",
     date: "Jan 22, 2024",
     readTime: "6 min read",
-    image: "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=1200&h=600&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=1200&h=600&fit=crop",
     featured: false,
   },
   {
     id: 4,
     slug: "learning-japanese-top-10-apps-beginners",
     title: "Learning Japanese: Top 10 Apps for Beginners",
-    excerpt: "Discover the best mobile applications to kickstart your Japanese language journey.",
+    excerpt:
+      "Discover the best mobile applications to kickstart your Japanese language journey.",
     content: `
 Learning Japanese has never been more accessible thanks to smartphone apps. Here are the top 10 apps that will help you go from zero to conversational.
 
@@ -308,17 +318,20 @@ Apps are tools, not magic solutions. Combine them with other resources—textboo
     `,
     category: "Languages",
     author: "Yuki Tanaka",
-    authorBio: "Language learning specialist and Japanese language instructor with experience teaching students worldwide.",
+    authorBio:
+      "Language learning specialist and Japanese language instructor with experience teaching students worldwide.",
     date: "Jan 20, 2024",
     readTime: "4 min read",
-    image: "https://images.unsplash.com/photo-1528164344705-47542687000d?w=1200&h=600&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1528164344705-47542687000d?w=1200&h=600&fit=crop",
     featured: false,
   },
   {
     id: 5,
     slug: "ai-in-education-transforming-how-we-learn",
     title: "AI in Education: Transforming How We Learn",
-    excerpt: "Exploring the revolutionary impact of artificial intelligence on modern education systems.",
+    excerpt:
+      "Exploring the revolutionary impact of artificial intelligence on modern education systems.",
     content: `
 Artificial intelligence is reshaping education in ways we're only beginning to understand. From personalized learning to automated grading, AI is transforming every aspect of how we teach and learn.
 
@@ -409,17 +422,20 @@ The future of education is neither fully human nor fully artificial—it's a col
     `,
     category: "Technology",
     author: "Michael Park",
-    authorBio: "EdTech researcher exploring the intersection of artificial intelligence and education.",
+    authorBio:
+      "EdTech researcher exploring the intersection of artificial intelligence and education.",
     date: "Jan 18, 2024",
     readTime: "7 min read",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=600&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=600&fit=crop",
     featured: false,
   },
   {
     id: 6,
     slug: "memory-palace-technique-exam-success",
     title: "Memory Palace Technique for Exam Success",
-    excerpt: "Ancient memorization techniques that modern students can use to ace their exams.",
+    excerpt:
+      "Ancient memorization techniques that modern students can use to ace their exams.",
     content: `
 The Memory Palace technique, also known as the Method of Loci, is a powerful memorization strategy that dates back to ancient Greece. Today, it remains one of the most effective methods for retaining large amounts of information.
 
@@ -524,10 +540,12 @@ The Memory Palace isn't magic—it's simply working with your brain's natural st
     `,
     category: "Study Tips",
     author: "Dr. Sarah Chen",
-    authorBio: "Educational psychologist specializing in learning optimization and student productivity.",
+    authorBio:
+      "Educational psychologist specializing in learning optimization and student productivity.",
     date: "Jan 15, 2024",
     readTime: "5 min read",
-    image: "https://images.unsplash.com/photo-1456406644174-8ddd4cd52a06?w=1200&h=600&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1456406644174-8ddd4cd52a06?w=1200&h=600&fit=crop",
     featured: false,
   },
 ];

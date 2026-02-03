@@ -49,7 +49,8 @@ const Footer = () => {
               </span>
             </a>
             <p className="text-muted-foreground text-sm mb-6 max-w-xs">
-              Empowering learners worldwide with quality educational content and study resources.
+              Empowering learners worldwide with quality educational content and
+              study resources.
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social) => (

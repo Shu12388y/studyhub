@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useState } from "react";
 import { motion } from "motion/react";
 import { BookOpen, Menu, X, Search } from "lucide-react";
@@ -96,7 +96,9 @@ const Header = () => {
                   {link.name}
                 </a>
               ))}
-              <Button variant="default" className="mt-2">Subscribe</Button>
+              <Button variant="default" className="mt-2">
+                Subscribe
+              </Button>
             </div>
           </motion.nav>
         )}

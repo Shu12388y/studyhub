@@ -1,1 +1,1 @@
-pnpm write && pnpm check
+pnpm check && pnpm write

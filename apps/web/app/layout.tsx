@@ -31,6 +31,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <Script
+          strategy="afterInteractive"
           async
           src={process.env.ADSURI}
           crossOrigin="anonymous"

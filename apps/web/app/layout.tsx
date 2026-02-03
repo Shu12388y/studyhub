@@ -33,7 +33,7 @@ export default function RootLayout({
         <Script
           strategy="afterInteractive"
           async
-          src={process.env.ADSURI}
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2771534793581944"
           crossOrigin="anonymous"
         />
       </body>

@@ -550,9 +550,7 @@ export interface BlogPost {
 //   },
 // ];
 
-
 export const blogPosts: BlogPost[] = [];
-
 
 export const categories = [
   "All",

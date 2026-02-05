@@ -179,7 +179,9 @@ const Hero = () => {
                       <span>{update.time}</span>
                     </div>
                     <div>
-                      <a target="_blank" href={update.link}>Read more</a>
+                      <a target="_blank" href={update.link}>
+                        Read more
+                      </a>
                     </div>
                   </div>
                 </div>

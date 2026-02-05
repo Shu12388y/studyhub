@@ -4,46 +4,27 @@ import { ArrowRight, Sparkles, Clock, Calendar, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import Link from "next/link";
-import { blogPosts, categories } from "@/data/blogPosts";
+import { blogPosts } from "@/data/blogPosts";
 
 const updates = [
   {
     id: 1,
-    title: "New Mathematics Problem Set Released",
-    category: "Mathematics",
+    title:
+      "Bank of Baroda Technical Recruitment 2026 – 400+ IT Vacancies, Salary Up to ₹1 Lakh | BOB SO 2026",
+    category: "Job Post",
     time: "2 hours ago",
     color: "bg-blue-500",
-  },
-  {
-    id: 2,
-    title: "Biology Chapter 12 Study Notes Available",
-    category: "Biology",
-    time: "5 hours ago",
-    color: "bg-green-500",
-  },
-  {
-    id: 3,
-    title: "Physics Formula Sheet Updated for 2024",
-    category: "Physics",
-    time: "1 day ago",
-    color: "bg-purple-500",
-  },
-  {
-    id: 4,
-    title: "History Timeline: World War II Summary",
-    category: "History",
-    time: "2 days ago",
-    color: "bg-amber-500",
+    link: "https://fml8evtv7z.ufs.sh/f/Gu11H2PmlhX6OEYf9HVRpJBMe3jHfzWxUCYThtwm8qVkPu1Q",
   },
 ];
 
 const Hero = () => {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [activeCategory, _setActiveCategory] = useState("All");
 
   const filteredPosts =
     activeCategory === "All"
       ? blogPosts
-      : blogPosts.filter((post) => post.category === activeCategory);
+      : blogPosts.filter((post) => post?.category === activeCategory);
   return (
     <>
       <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
@@ -184,7 +165,7 @@ const Hero = () => {
               >
                 <div className="flex items-start gap-4">
                   <div
-                    className={`w-3 h-3 rounded-full ${update.color} mt-2 flex-shrink-0`}
+                    className={`w-3 h-3 rounded-full ${update.color} mt-2 shrink-0`}
                   />
                   <div>
                     <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
@@ -196,6 +177,9 @@ const Hero = () => {
                     <div className="flex items-center gap-1 text-sm text-muted-foreground">
                       <Clock className="w-4 h-4" />
                       <span>{update.time}</span>
+                    </div>
+                    <div>
+                      <a target="_blank" href={update.link}>Read more</a>
                     </div>
                   </div>
                 </div>
@@ -223,7 +207,7 @@ const Hero = () => {
           </motion.div>
 
           {/* Category Filter */}
-          <motion.div
+          {/* <motion.div
             className="flex flex-wrap justify-center gap-2 mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -243,8 +227,9 @@ const Hero = () => {
                 {category}
               </button>
             ))}
-          </motion.div>
+          </motion.div> */}
 
+          <div className="text-center text-bold">No Articles</div>
           {/* Blog Grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post, index) => (
@@ -307,7 +292,7 @@ const Hero = () => {
           </div>
 
           {/* Load More */}
-          <motion.div
+          {/* <motion.div
             className="text-center mt-12"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -318,7 +303,7 @@ const Hero = () => {
               Load More Articles
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
-          </motion.div>
+          </motion.div> */}
         </div>
       </section>
     </>

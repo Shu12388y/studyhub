@@ -28,10 +28,10 @@ const Header = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="w-10 h-10 rounded-lg hero-gradient flex items-center justify-center">
-              <BookOpen className="w-5 h-5 text-primary-foreground" />
+              <BookOpen className="w-5 h-5 text-black" />
             </div>
             <span className="font-display text-xl font-semibold text-foreground">
-              StudyHub
+              Exam Buddy
             </span>
           </motion.a>
 
